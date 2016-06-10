@@ -1,0 +1,4 @@
+#Use an valid item name not id!
+#Use a list such as http://www.minecraftinfo.com/idnamelist.htm
+cost-item: diamond
+cost-amount: 10

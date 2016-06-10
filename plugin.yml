@@ -1,0 +1,6 @@
+name: DeathVaults
+version: 1.0
+main: com.wishiwashi.deathvault.DeathVault
+commands: 
+    deathrestore:
+        description: Main command for the DeathVault plugin
