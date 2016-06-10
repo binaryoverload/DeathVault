@@ -27,7 +27,8 @@ public class DeathVault extends JavaPlugin implements Listener{
 
 	//Declare logger to use in other methods
 	private Logger logger = getLogger();
-
+	
+	//Declare PlayerDatabase dir
 	String userdata = this.getDataFolder() + File.separator + "PlayerDatabase";
 
 	public void onEnable() {
@@ -36,11 +37,13 @@ public class DeathVault extends JavaPlugin implements Listener{
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		//Setup config files
 		saveDefaultConfig();
+		//Log out that plugin is enabled
 		logger.info("DeathVaults Enabled!");
 	}
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		//Check if the command is the correct one ("DeathRestore")
 		if(command.getName().equalsIgnoreCase("deathrestore")){
 			if(args.length == 0){
 				if(sender instanceof Player) {
